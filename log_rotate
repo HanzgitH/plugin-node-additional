@@ -1,6 +1,6 @@
 ##For logrotate user must be within docker: 
  
-sudo docker exec -it pli node/bin/bash 
+ sudo docker exec -it pli node/bin/bash 
  
  
  
