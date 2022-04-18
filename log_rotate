@@ -1,20 +1,20 @@
-#For logrotate user must be within docker: 
+##For logrotate user must be within docker: 
  
 sudo docker exec -it pli node/bin/bash 
  
  
  
-#Inside the container install nano: 
+##Inside the container install nano: 
  
 apt-get install nano 
  
  
-#Install logrotate 
+##Install logrotate 
  
 apt-get install logrotate 
  
  
-#  Move to corect directory and add a log rotate file in docker: 
+##Move to corect directory and add a log rotate file in docker: 
  
  
 cd /etc/logrotate.d 
@@ -32,7 +32,7 @@ notifempty
 maxage 7 
 } 
  
-#Create second log rotate file:
+##Create second log rotate file:
  
 nano log.jsonl: 
  
@@ -47,7 +47,7 @@ maxage 7
  
  
  
-#Manually rotate logs 
+##Manually rotate logs 
 
 logrotate -vf /etc/logrotate.conf 
  
