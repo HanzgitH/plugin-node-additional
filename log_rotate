@@ -1,0 +1,67 @@
+#For logrotate user must be within docker: 
+ 
+sudo docker exec -it pli node/bin/bash 
+ 
+ 
+ 
+#Inside the container install nano: 
+ 
+apt-get install nano 
+ 
+ 
+#Install logrotate 
+ 
+apt-get install logrotate 
+ 
+ 
+#  Move to corect directory and add a log rotate file in docker: 
+ 
+ 
+cd /etc/logrotate.d 
+ 
+ 
+ 
+nano pm2logs: 
+ 
+/root/.pm2/logs/*.log { 
+rotate 6 
+daily 
+compress 
+missingok 
+notifempty 
+maxage 7 
+} 
+ 
+#Create second log rotate file:
+ 
+nano log.jsonl: 
+ 
+/root/.plugin/log.jsonl { 
+rotate 6 
+daily 
+compress 
+missingok 
+notifempty 
+maxage 7 
+} 
+ 
+ 
+ 
+#Manually rotate logs 
+
+logrotate -vf /etc/logrotate.conf 
+ 
+ 
+ 
+#Test logrotate 
+
+logrotate -d /etc/logrotate.conf 
+ 
+ 
+ 
+Confirm space before and after of log folders: 
+ 
+du -h /root/.pm2/logs 
+
+du -h /root/.plugin/log.jsonl 
+ 
