@@ -2,8 +2,7 @@
 ### Logs will be deleted every 7 days.
 
 sudo docker exec -it pli node/bin/bash 
- 
- 
+
  
 ##Inside the container install nano: 
  
@@ -19,6 +18,7 @@ apt-get install logrotate
  
 cd /etc/logrotate.d 
  
+
 ##Create log file and add contents:
  
 nano pm2logs
@@ -31,7 +31,8 @@ missingok
 notifempty 
 maxage 7 
 } 
- 
+
+
 ##Create second log rotate file and add contents:
  
 nano log.jsonl
