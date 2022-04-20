@@ -21,7 +21,7 @@ cd /etc/logrotate.d
  
  
  
-nano pm2logs: 
+nano pm2logs
  
 /root/.pm2/logs/*.log { 
 rotate 6 
@@ -34,7 +34,7 @@ maxage 7
  
 ##Create second log rotate file:
  
-nano log.jsonl: 
+nano log.jsonl
  
 /root/.plugin/log.jsonl { 
 rotate 6 
