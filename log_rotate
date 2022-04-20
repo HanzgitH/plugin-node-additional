@@ -1,5 +1,6 @@
-##For logrotate user must be within docker, log into your VPS and access docker, when you have finished use exit to leave the container. 
- 
+###For logrotate user must be within docker, log into your VPS and access docker, when you have finished use exit to leave the container. 
+### Logs will be deleted ever 7 days.
+
 sudo docker exec -it pli node/bin/bash 
  
  
