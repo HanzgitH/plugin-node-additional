@@ -51,9 +51,8 @@ maxage 7
 
 logrotate -vf /etc/logrotate.conf 
  
- 
- 
-#Test logrotate 
+
+##Test logrotate 
 
 logrotate -d /etc/logrotate.conf 
  
