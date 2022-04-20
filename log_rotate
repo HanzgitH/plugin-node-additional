@@ -14,12 +14,11 @@ apt-get install nano
 apt-get install logrotate 
  
  
-##Move to corect directory and add a log rotate file in docker: 
- 
+##Move to correct directory and add a log rotate file in docker: 
  
 cd /etc/logrotate.d 
  
- 
+##Create log file and add contents:
  
 nano pm2logs
  
@@ -32,7 +31,7 @@ notifempty
 maxage 7 
 } 
  
-##Create second log rotate file:
+##Create second log rotate file and add contents:
  
 nano log.jsonl
  
@@ -44,7 +43,6 @@ missingok
 notifempty 
 maxage 7 
 } 
- 
  
  
 ##Manually rotate logs 
@@ -59,7 +57,7 @@ logrotate -d /etc/logrotate.conf
  
  
  
-Confirm space before and after of log folders: 
+##Confirm space before and after of log folders: 
  
 du -h /root/.pm2/logs 
 
