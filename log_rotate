@@ -1,6 +1,6 @@
-##For logrotate user must be within docker: 
+##For logrotate user must be within docker, log into your VPS and access docker, when you have finished use exit to leave the container. 
  
- sudo docker exec -it pli node/bin/bash 
+sudo docker exec -it pli node/bin/bash 
  
  
  
